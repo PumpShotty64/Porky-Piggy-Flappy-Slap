@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float jumpPower = 1000;
 
+    public GameObject Wall;
+ 
+    public float jumpPower = 1000;
+    private float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,18 @@ public class Movement : MonoBehaviour
     void Update()
     {
         Jump();
+        CreateWall();
+    }
+
+    void CreateWall()
+    {
+        time += Time.deltaTime;
+        if (time > 1)
+        {
+            GameObject Wall2 = Instantiate(Wall);
+            Wall2.GetComponent
+            time = 0;
+        }
     }
 
     void Jump()

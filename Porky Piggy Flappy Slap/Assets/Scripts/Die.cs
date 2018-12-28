@@ -20,7 +20,7 @@ public class Die : MonoBehaviour
     {
         Destroy(gameObject);
         //gameObject.GetComponent<Wall_Movement>().enabled = false;
-    
+        
 
     }
 }
